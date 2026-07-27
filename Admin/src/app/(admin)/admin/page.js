@@ -30,6 +30,14 @@ export default function AdminDashboard() {
           <p className="text-gray-500 text-sm">Configure WhatsApp and Messenger chat links and toggle widget visibility.</p>
         </Link>
 
+        <Link href="/admin/consultation" className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition group">
+          <div className="w-12 h-12 bg-orange-100 text-[#EA7A00] flex items-center justify-center rounded-lg mb-4">
+            <span className="text-2xl">📞</span>
+          </div>
+          <h2 className="text-xl font-semibold mb-2 group-hover:text-[#EA7A00] transition">Consultation Number</h2>
+          <p className="text-gray-500 text-sm">Set the phone number that visitors will dial when clicking the Free Consultation button.</p>
+        </Link>
+
         <Link href="/admin/gallery" className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition group">
           <div className="w-12 h-12 bg-orange-100 text-[#EA7A00] flex items-center justify-center rounded-lg mb-4">
             <span className="text-2xl">📸</span>
