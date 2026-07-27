@@ -3,13 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { toast } from "react-toastify";
-import { FaWhatsapp, FaFacebookMessenger, FaInstagram, FaArrowLeft, FaComments } from "react-icons/fa";
+import { FaWhatsapp, FaFacebookMessenger, FaArrowLeft, FaComments } from "react-icons/fa";
 
 export default function ChatWidgetPage() {
   const [formData, setFormData] = useState({
     whatsapp: "https://wa.me/8801700000000",
     messenger: "https://m.me/yourpage",
-    instagram: "https://instagram.com/yourprofile",
     enabled: true,
   });
   const [loading, setLoading] = useState(true);
@@ -23,7 +22,6 @@ export default function ChatWidgetPage() {
           setFormData({
             whatsapp: data.whatsapp || "",
             messenger: data.messenger || "",
-            instagram: data.instagram || "",
             enabled: data.enabled !== undefined ? data.enabled : true,
           });
         }
@@ -140,22 +138,6 @@ export default function ChatWidgetPage() {
                 placeholder="https://m.me/yourpage"
               />
               <p className="text-xs text-gray-400 mt-1">Example: https://m.me/yourfacebookpageusername or direct profile link</p>
-            </div>
-
-            {/* Instagram Link */}
-            <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                <FaInstagram className="text-pink-500 text-lg" /> Instagram Profile / DM Link
-              </label>
-              <input
-                type="text"
-                name="instagram"
-                value={formData.instagram}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-[#EA7A00]/20 focus:border-[#EA7A00] outline-none transition text-sm"
-                placeholder="https://instagram.com/yourprofile"
-              />
-              <p className="text-xs text-gray-400 mt-1">Example: https://instagram.com/yourprofile or https://ig.me/m/yourprofile</p>
             </div>
 
             <div className="pt-4 border-t">
