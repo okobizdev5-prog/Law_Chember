@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    cursor: none;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #1e293b;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: var(--font-serif), Georgia, serif;
+    color: #0f172a;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ─── Executive Law Chamber Color Grading & Luxury Tokens ─── */
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FCE6A8 0%, #D4AF37 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C5A059 50%, #9E7D3B 100%);
+}
+
+.bg-gold-gradient:hover {
+  background: linear-gradient(135deg, #FCE6A8 0%, #D4AF37 50%, #AA820A 100%);
+}
+
+.border-gold {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.border-gold-strong {
+  border-color: rgba(212, 175, 55, 0.8);
+}
+
+.shadow-gold {
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+.shadow-gold-lg {
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+}
+
+/* Executive Card Surfaces with High Contrast & Subtle Gold Glow */
+.executive-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.executive-card:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07), 0 0 15px rgba(212, 175, 55, 0.1);
+  transform: translateY(-4px);
+}
+
+.gold-divider {
+  display: block;
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, transparent);
+  margin-top: 1rem;
+}
+
+.gold-divider-center {
+  display: block;
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 1.25rem auto 0;
+}
+
+/* Swiper Navigation Mobile Overrides */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+/* Disable custom cursor on mobile/touch viewports */
+@media (max-width: 1024px) {
+  body {
+    cursor: auto !important;
+  }
+  .custom-cursor,
+  [class*="Cursor_"] {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
